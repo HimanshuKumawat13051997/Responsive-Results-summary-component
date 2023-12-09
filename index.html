@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-top: 25vh;
+    }
+
+    .container {
+      display: flex;
+      width: 500px;
+      height: 350px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 8px 0px hsl(241, 100%, 89%);
+    }
+
+    .container .b2 {
+      width: 500px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+
+    .container .b22 {
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      border-radius: 15px;
+
+    }
+
+    .container .b2 .tt {
+      box-sizing: border-box;
+    }
+
+    .container .b2 .box1 {
+      position: relative;
+      top: 20px;
+      font-size: 15px;
+      color: hsl(241, 100%, 89%);
+    }
+
+    .container .b2 .box2 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 100%;
+      width: 120px;
+      height: 120px;
+      background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      font-size: 40px;
+      color: white;
+    }
+
+    .container .b2 .sp {
+      font-size: 10px;
+      color: hsl(241, 100%, 89%);
+    }
+
+    .container .b2 .box3 {
+      color: white;
+      position: relative;
+      bottom: 15px;
+      font-size: 18px;
+    }
+
+    .container .b2 .box4 {
+      position: relative;
+      bottom: 30px;
+      width: 180px;
+      font-size: 13px;
+      text-align: center;
+      color: hsl(241, 100%, 89%);
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 400;
+    }
+
+    .container .bwhite {
+      border-radius: 15px;
+    }
+
+    .container .bwhite .c21 {
+      width: 200px;
+      margin-top: 20px;
+      color: hsl(224, 30%, 27%);
+      font-weight: 800;
+    }
+
+    .container .bwhite .c24 {
+      width: 190px;
+      border-radius: 100px;
+      height: 30px;
+      font-weight: 700;
+      color: white;
+      background-color: hsl(224, 30%, 27%);
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+    .container .bwhite .c24:hover{
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+
+.container .bwhite .c23 {
+  height: 220px;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+    .container .bwhite .c23 .drop {
+      display: flex;
+      align-items: center;
+    }
+    .container .bwhite .c23 .drop .drop1{
+      flex-grow: 2; 
+      position: relative;
+      left: 10px;
+      top: 2px;
+    }
+    .container .bwhite .c23 .drop .hk{
+      flex-grow: 4;
+    }
+    .container .bwhite .c23 .drop:nth-child(n){
+      height: 35px;
+      border-radius: 8px;
+      font-size: 13px
+    } 
+.container .bwhite .c23 .red{
+      height: 35px;
+      border-radius: 8px;
+      background-color: hsla(0, 100%, 67%, 0.1);
+      
+    } 
+    .container .bwhite .c23 .yellow{
+      height: 35px;
+      border-radius: 8px;
+      background-color: hsla(39, 100%, 56%, 0.1);
+    } 
+    .container .bwhite .c23 .green{
+      height: 35px;
+      border-radius: 8px;
+      background-color: hsl(166, 100%, 37%, 0.1);
+    } 
+    .container .bwhite .c23 .blue{
+      height: 35px;
+      border-radius: 8px;
+      background-color: hsl(234, 85%, 45%, 0.1);
+    }     
+    .container .bwhite .c23 .drop .drop2 {
+      color: hsl(0, 100%, 67%);
+    }
+    .container .bwhite .c23 .drop .drop22 {
+      color: hsl(39, 100%, 56%);
+    }
+    .container .bwhite .c23 .drop .drop222 {
+      color: hsl(166, 100%, 37%);
+    }
+    .container .bwhite .c23 .drop .drop2222 {
+      color:  hsl(234, 85%, 45%);
+    }
+    .container .bwhite .c23 .drop .drop3{
+      color: hsla(224, 30%, 27%, 0.4);
+      font-weight: 700;
+      flex-grow: 1;
+    }
+    .container .bwhite .c23 .drop .drop3 span {
+      font-weight: 800;
+      color: black;
+    }
+    @media only screen and (max-width: 600px) {
+      *{
+       padding: 0;
+       margin: 0;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        width: 100vw;
+    }
+      .container{
+        flex-direction: column;
+        width: 100vw;
+         height: 100vh;
+         border-radius: 0px;
+         box-shadow: none;
+      }
+      .container .b2{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+      }
+
+      .container .b22{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    
+    .container .bwhite {
+      border-radius: 0px;
+    }
+    .container .bwhite .c23 {
+  height: 220px;
+  width: 190px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <main id="wwe">
+    <div class="container">
+      <div class="b2 b22">
+        <div class="tt box1">Your Result</div>
+        <div class="tt box2"> <span>76</span>
+          <span class="sp">of 100</span>
+        </div>
+        <div class="tt box3"> Great</div>
+        <div class="tt box4"> You scored higher than 65% of the people who have taken these tests.</div>
+      </div>
+      <div class="b2 bwhite" id="m1">
+        <div class="c21"> Summary</div>
+        <div class="c23">
+          <div class="drop red">
+            <div class="drop1">
+              <img width="15px" src="/assets/images/icon-reaction.svg" alt="">
+            </div>
+            <div class="drop2 hk">Reaction</div>
+            <div class="drop3"><span>80</span> / 100</div>
+          </div>
+          <div class="drop yellow">
+            <div class="drop1"><img width="15px" src="/assets/images/icon-memory.svg" alt=""></div>
+            <div class="drop22 hk">Memory</div>
+            <div class="drop3"><span>92</span> / 100</div>
+          </div>
+          <div class="drop green">
+            <div class="drop1"><img width="15px" src="/assets/images/icon-verbal.svg" alt=""></div>
+            <div class="drop222 hk">Verbal</div>
+            <div class="drop3"><span>61</span> / 100</div>
+          </div>
+          <div class="drop blue">
+            <div class="drop1"> <img width="15px" src="/assets/images/icon-visual.svg" alt=""></div>
+            <div class="drop2222 hk">Visual</div>
+            <div class="drop3"><span>72</span> / 100</div>
+          </div>
+        </div>
+        <div class="c24" id="mm">Continue</div>
+      </div>
+    </div>
+  </main>
+  <br>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Himanshu Kumawat</a>.
+  </div>
+</body>
+
+</html>
